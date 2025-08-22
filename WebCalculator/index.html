@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Web: Calculator</title>
+</head>
+<body>
+    <!-- SCRIPT -->
+    <script src="index.js" defer></script>
+    <!-- SCRIPT: MATH LIBRARY -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"
+    integrity="sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jlVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script> -->
+
+    <!-- PARENT CONTAINER -->
+    <div id="div-container">
+        <h1>WEB CALCULATOR</h1> 
+        <!-- INPUT-OUTPUT DISPLAY -->
+        <input type="text" id="input-output-display">
+        <!-- CALCULATOR: NUMBER & OPERATION KEYS -->
+        <table id="calculator-layout">
+            <tr>
+                <td><button class="number-buttons" onclick="append(7)">7</button></td>
+                <td><button class="number-buttons"onclick="append(8)">8</button></td>
+                <td><button class="number-buttons"onclick="append(9)">9</button></td>
+                <td><button class="utility-buttons" onclick="backspace()">C</button></td>
+                <tr>
+                    <td><button class="number-buttons" onclick="append(4)">4</button></td>
+                    <td><button class="number-buttons" onclick="append(5)">5</button></td>
+                    <td><button class="number-buttons" onclick="append(6)">6</button></td>
+                <td><button class="utility-buttons" onclick="clearInput()">AC</button></td>
+                </tr>
+                <tr>
+                    <td><button class="number-buttons" onclick="append(1)">1</button></td>
+                    <td><button class="number-buttons" onclick="append(2)">2</button></td>
+                    <td><button class="number-buttons" onclick="append(3)">3</button></td>
+                <td><button class="operation-buttons" onclick="appendOperation('+')">+</button></td>
+                </tr>
+                <tr>
+                    <td><button class="number-buttons" onclick="appendOperation('.')">.</button></td>
+                    <td><button class="number-buttons" onclick="append(0)">0</button></td>
+                    <td><button class="operation-buttons" class="right-buttons" onclick="appendOperation('%')">%</button></td>
+                    <td><button class="operation-buttons" onclick="appendOperation('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td id="result-box" colspan="2"><button onclick="calculate()">=</button></td>
+                    <td><button class="operation-buttons" onclick="appendOperation('/')">/</button></td>
+                    <td><button class="operation-buttons" onclick="appendOperation('*')">x</button></td>
+                </tr>
+            </tr>
+        </table>
+        </div>
+    </div>
+</body>
+</html>
