@@ -1,0 +1,211 @@
+:root {
+    --primary: #EAEAEA;
+    --secondary: #666666;
+    --accent: #333333;
+
+    margin: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100vh;
+
+    background-color: var(--primary);
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 10px;
+
+    width: 100%;
+    height: 100px;
+
+    padding: 0 4%;
+
+    background-color: var(--accent);
+}
+
+#banner {
+    width: 14%;
+    height: 40px;
+
+    border-radius: 10px;
+    
+    background-color: var(--primary);
+}
+
+#navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 4%;
+
+    width: 60%;
+    height: 40px;
+
+    border-radius: 10px;
+
+    background-color: var(--secondary);
+}
+
+#nav-link {
+    width: 15%;
+    height: 20px;
+
+    border-radius: 6px;
+
+    background-color: var(--primary);
+}
+
+#burger-menu {
+    min-width: 40px;
+    min-height: 40px;
+    width: 2.5%;
+    aspect-ratio: 1 / 1;
+
+    border-radius: 10px;
+
+    background-color: var(--secondary);
+}
+
+#main-content {
+    flex: 1;
+    width: 100%;
+
+    background-color: var(--secondary);
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+
+    width: 100%;
+    height: 80px;
+
+    padding: 0 2%;
+
+    background-color: var(--accent);
+}
+
+#footer-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40%;
+    height: 40%;
+
+    border-radius: 6px;
+
+    background-color: var(--secondary);
+}
+
+.footer-link {
+    width: 20%;
+    height: 14px;
+
+    margin: 0 2%;
+
+    border-radius: 6px;
+
+    background-color: var(--primary);
+}
+
+/* Responsive styles */
+/* Media Query (Tablets): Shrink Navigation Links */
+@media (max-width: 1024px) {
+    #navigation {
+        width: 70%;
+        gap: 1%;
+    }
+    
+    #nav-link {
+        width: 18%;
+    }
+    #footer-navigation {
+        width: 60%;
+    }
+}
+
+/* Media Query (Mobile Phones): Hide Navigation Bar, Show Burger Menu */
+@media (max-width: 768px) {
+    #navigation {
+        display: none;
+    }
+
+    #burger-menu {
+        display: block;
+    }
+
+    #banner {
+        width: 25%;
+    }
+
+    #footer-navigation {
+        width: 80%;
+        height: 80%;
+        gap: 1% 4%;
+        flex-wrap: wrap;
+    }
+
+    .footer-link {
+        width: 40%;
+        margin: 4px 0;
+    }
+}
+
+/* Media Query (Small Phones) */
+@media (max-width: 480px) {
+    #header {
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    #banner {
+        width: 60%;
+        height: 30px;
+    }
+
+    #burger-menu {
+        align-self: flex-end;
+        min-width: 30px;
+        min-height: 30px;
+    }
+
+    #footer {
+        height: auto;
+        padding: 10px;
+    }
+
+    #footer-navigation {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        gap: 6px;
+    }
+
+    .footer-link {
+        width: 60%;
+        height: 20px;
+    }
+}
