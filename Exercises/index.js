@@ -121,4 +121,4 @@ console.log(color);
 
 
 //Exercise 2
-    Create an array and use methods pop(), push(), and reverse()
+    // Create an array and use methods pop(), push(), and reverse()
